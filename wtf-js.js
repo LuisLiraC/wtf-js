@@ -37,11 +37,10 @@ function WTFJS(text) {
 }
 
 function TextToWTF(text) {
-  const textArray = text.split('')
-  const textWTF = []
-  textArray.forEach(ch => dictionary[ch.toLowerCase()] && textWTF.push(dictionary[ch.toLowerCase()]))
-  const wtfText = textWTF.join('+')
-  return wtfText
+  return text.split('')
+    .map(ch => dictionary[ch.toLowerCase()] && dictionary[ch.toLowerCase()])
+    .filter(el => el != '')
+    .join('+')
 }
 
 module.exports = WTFJS
