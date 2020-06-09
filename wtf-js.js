@@ -30,19 +30,18 @@ const dictionary = {
 
 function WTFJS(text) {
   try {
-    const textArray = text.split('')
-    const textWTF = []
-    textArray.forEach(ch => dictionary[ch.toLowerCase()] && textWTF.push(dictionary[ch.toLowerCase()]))
-    const wtfText = textWTF.join('+')
-    return wtfText
+    return TextToWTF(text)
   } catch (error) {
-    text = 'You should pass a String'
-    const textArray = text.split('')
-    const textWTF = []
-    textArray.forEach(ch => dictionary[ch.toLowerCase()] && textWTF.push(dictionary[ch.toLowerCase()]))
-    const wtfText = textWTF.join('+')
-    return wtfText
+    return TextToWTF('You should pass a String')
   }
+}
+
+function TextToWTF(text) {
+  const textArray = text.split('')
+  const textWTF = []
+  textArray.forEach(ch => dictionary[ch.toLowerCase()] && textWTF.push(dictionary[ch.toLowerCase()]))
+  const wtfText = textWTF.join('+')
+  return wtfText
 }
 
 module.exports = WTFJS
