@@ -1,0 +1,11 @@
+{
+  "name": "wtf-js",
+  "version": "1.0.0",
+  "description": "Creator of esoteric JavaScript strings",
+  "main": "wtf-js.js",
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "LuisLiraC",
+  "license": "MIT"
+}
